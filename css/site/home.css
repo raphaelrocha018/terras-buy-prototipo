@@ -219,6 +219,11 @@
     height: 20px;
 }
 
+.measurement > sub {
+    font-size: 10px;
+    align-self: end;
+}
+
 .measurement.medida::before {
     background-image: url(../img/site/home/icones/regua.png);
 }
