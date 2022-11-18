@@ -1,0 +1,160 @@
+/* CABEÇALHO */
+
+.header-navbar {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu {
+    display: flex;
+    gap: 2.5rem;
+
+    color: var(--p4);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.header-menu a:hover {
+    color: var(--p2);
+    transition: 0.3s ease;
+}
+
+.header-btns {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.btn-login {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--p3);
+
+    color: var(--p3);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-cadastro {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+
+    background-color: var(--p4);
+    color: var(--p1);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn-login:hover,
+.btn-cadastro:hover {
+    border-color: var(--p2);
+    color: var(--p2);
+    background-color: var(--c00);
+    transition: 0.3s ease;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1440px) {
+    .header-navbar {
+        padding: 2rem 0;
+    }
+
+    .header-menu {
+        gap: 2rem;
+        font-size: 0.875rem;
+    }
+
+    .header-btns {
+        gap: 1rem;
+    }
+
+    .btn-login {
+        padding: 0.5rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    .btn-cadastro {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .header-navbar {
+        padding: 3rem 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 3rem 2rem;
+    }
+
+    .logo {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .header-menu {
+        grid-row: 2;
+        gap: 1.5rem;
+        font-size: 0.75rem;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .header-btns {
+        grid-row: 2;
+        gap: 0.75rem;
+    }
+
+    .btn-login {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .btn-cadastro {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .header-navbar {
+        padding: 2rem 0;
+        grid-template-columns: auto auto;
+        gap: 0;
+    }
+
+    .logo {
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    .header-menu {
+        display: none;
+        /* grid-row: 2;
+        grid-column: 1/-1;
+
+        justify-content: space-between;
+        padding: 0.75rem 1rem; */
+    }
+
+    .header-btns {
+        grid-row: 1;
+        grid-column: 2;
+        justify-content: end;
+    }
+
+    .btn-login {
+        padding: 0.75rem 1.125rem;
+        font-size: 0.75rem;
+    }
+
+    .btn-cadastro {
+        padding: 0.75rem 1.125rem;
+        font-size: 0.75rem;
+    }
+}

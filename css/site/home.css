@@ -1,0 +1,763 @@
+/* INÍCIO */
+
+.inicio {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+
+    margin-top: 7rem;
+    margin-bottom: 16rem;
+    color: var(--p4);
+}
+
+.inicio-img {
+    position: absolute;
+    top: 25rem;
+    z-index: -1;
+}
+
+.inicio h1 {
+    grid-column: 2;
+    margin-bottom: 1rem;
+    position: relative;
+
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4rem;
+}
+
+.inicio h1::before {
+    content: "";
+    display: block;
+
+    width: 16rem;
+    height: 1rem;
+
+    background-color: var(--p2);
+    border-radius: 4px;
+
+    position: absolute;
+    top: 7rem;
+    z-index: -1;
+}
+
+.inicio p {
+    grid-column: 2;
+    margin-bottom: 1.25rem;
+    max-width: 49ch;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--c70);
+}
+
+.inicio .bnt-inicio {
+    grid-column: 2;
+}
+
+.bnt-inicio {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+
+    max-width: max-content;
+    padding: 0.75rem 1.5rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--p1);
+    background-color: var(--p4);
+
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+}
+
+.bnt-inicio::before {
+    content: "";
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.5rem;
+    background: url(../img/site/home/icones/terras.svg);
+}
+
+.bnt-inicio:hover {
+    color: var(--p2);
+    background: var(--c00);
+    border: 2px solid var(--p2);
+    transition: 0.3s ease;
+}
+
+.bnt-inicio:hover::before {
+    background: url(../img/site/home/icones/terras-hover.svg);
+    transition: 0.3s ease;
+}
+
+/* EMPREENDIMENTOS */
+
+.empreendimentos {
+    padding: 8rem 0rem 8rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+.empreendimentos h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--p4);
+
+    margin-bottom: 1rem;
+}
+
+.empreendimentos p {
+    grid-area: 2/1;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--c70);
+}
+
+.card-group {
+    grid-area: 2/2;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    margin-right: calc(-50vw + 90.8%);
+}
+
+.card-group:last-child {
+    padding-right: 1.5rem;
+}
+
+.card {
+    min-width: 24rem;
+    background-color: var(--c00);
+    border-radius: 1rem;
+    padding: 0.75rem;
+}
+
+.card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+.card > img {
+    border-radius: 0.75rem;
+}
+
+.card-content {
+    padding: 0.75rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.property-type {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+.planned-neighborhood {
+    color: var(--s1);
+}
+
+.closed-condo {
+    color: var(--s2);
+}
+
+.property-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--p4);
+}
+
+.property-location {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--p4);
+    margin-bottom: 1.25rem;
+}
+
+.property-measurements {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 0.75rem;
+    color: var(--c70);
+
+    margin-bottom: 1.5rem;
+}
+
+.property-measurements > span {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.property-measurements > div {
+    display: flex;
+    gap: 2rem;
+}
+
+.measurement {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.measurement.medida::before,
+.measurement.valor::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.measurement.medida::before {
+    background-image: url(../img/site/home/icones/regua.png);
+}
+
+.measurement.valor::before {
+    background-image: url(../img/site/home/icones/dinheiro.png);
+}
+
+.property-available-units {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--p2);
+}
+
+.pill {
+    border-radius: 0.25rem;
+    padding: 0.125rem 0.5rem;
+    background-color: var(--p2);
+    color: var(--c00);
+}
+
+/* SOBRE */
+
+.sobre {
+    background-color: var(--p4);
+    padding: 15rem 0;
+}
+
+.sobre-conteudo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sobre-conteudo h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--c00);
+
+    max-width: 16ch;
+    margin-bottom: 1rem;
+}
+
+.sobre-conteudo p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #e1e1e1;
+
+    max-width: 48ch;
+}
+
+/* PARCEIROS */
+
+.parceiros {
+    padding: 12rem 5rem;
+}
+
+.parceiros-box {
+    background: url(../img/site/home/parceiros-home.jpg) center center no-repeat
+        fixed;
+    background-size: cover;
+    border-radius: 1rem;
+
+    max-width: 80rem;
+    height: 32rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+}
+
+.parceiros-conteudo {
+    grid-column: 2;
+}
+
+.parceiros-conteudo h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--c00);
+
+    max-width: 121mm;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 0;
+}
+
+.parceiros-conteudo h2::before {
+    content: "";
+    display: block;
+
+    width: 16.8rem;
+    height: 1rem;
+
+    background-color: var(--p2);
+    border-radius: 4px;
+
+    position: absolute;
+    top: 6.35rem;
+    left: 4.3rem;
+    z-index: -1;
+}
+
+.parceiros-conteudo p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--c10);
+
+    margin-bottom: 1.125rem;
+    max-width: 41ch;
+}
+
+.bnt-parceiro {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+
+    max-width: max-content;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--p4);
+    background-color: var(--p1);
+}
+
+.bnt-parceiro::before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.3125rem;
+    background: url(../img/site/home/icones/parceiros.svg);
+}
+
+.bnt-parceiro:hover {
+    color: var(--p2);
+    background: var(--c00);
+    transition: 0.3s ease;
+}
+
+.bnt-parceiro:hover::before {
+    background: url(../img/site/home/icones/parceiros-hover.svg);
+    transition: 0.3s ease;
+}
+
+/* BARRA DE ROLAGEM empreendimentos */
+
+::-webkit-scrollbar {
+    opacity: 100%;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 0.75rem;
+    border-radius: 1rem;
+    background-color: var(--c00);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    border: 2px solid var(--c00);
+    border-radius: 1rem;
+    background-color: var(--c30);
+}
+
+::-webkit-scrollbar-thumb:vertical:hover {
+    border: 2px solid var(--c00);
+    border-radius: 1rem;
+    background-color: var(--c40);
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 1rem;
+    background-color: var(--c00);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    border: 2px solid var(--c00);
+    border-radius: 1rem;
+    background-color: var(--c30);
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+    border: 2px solid var(--c00);
+    border-radius: 1rem;
+    background-color: var(--c40);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1440px) {
+    /* INICIO */
+
+    .inicio {
+        margin-bottom: 12rem;
+    }
+
+    .inicio-img {
+        max-width: 60%;
+        top: 21rem;
+    }
+
+    .inicio h1 {
+        margin-bottom: 0.75rem;
+        font-size: 3rem;
+        line-height: 3rem;
+        max-width: 17ch;
+    }
+
+    .inicio h1::before {
+        width: 12rem;
+        height: 1rem;
+        top: 5rem;
+    }
+
+    .inicio p {
+        margin-bottom: 1rem;
+        max-width: 49ch;
+        font-size: 0.875rem;
+    }
+
+    .bnt-inicio {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    /* EMPREENDIMENTOS */
+
+    .empreendimentos {
+        padding: 6rem 0rem 6rem 2rem;
+    }
+
+    .empreendimentos h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+        max-width: 14ch;
+    }
+
+    .empreendimentos p {
+        font-size: 0.875rem;
+    }
+
+    .card-group {
+        gap: 1.25rem;
+        margin-right: calc(-50vw + 83.7%);
+    }
+
+    .card {
+        min-width: 21rem;
+    }
+
+    .card-content {
+        padding: 0.75rem 1rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .property-name {
+        font-size: 1.25rem;
+    }
+
+    .property-location {
+        font-size: 0.75rem;
+    }
+
+    .property-measurements > span {
+        font-size: 0.75rem;
+    }
+
+    .property-measurements > div {
+        gap: 2rem;
+    }
+
+    .measurement {
+        font-size: 0.75rem;
+    }
+
+    /* SOBRE */
+
+    .sobre {
+        padding: 10rem 0;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 2.5rem;
+        max-width: 16ch;
+    }
+
+    .sobre-conteudo p {
+        font-size: 0.875rem;
+        max-width: 44ch;
+    }
+
+    .sobre-conteudo img {
+        max-width: 50%;
+    }
+
+    /* PARCEIROS */
+
+    .parceiros {
+        padding-inline: 2rem;
+    }
+
+    .parceiros-box {
+        max-width: 67.5rem;
+        height: 26.5rem;
+    }
+
+    .parceiros-conteudo h2 {
+        font-size: 2rem;
+        max-width: 96.8mm;
+        margin-bottom: 0.5rem;
+    }
+
+    .parceiros-conteudo h2::before {
+        width: 13.3rem;
+        top: 5.1rem;
+        left: 3.5rem;
+    }
+
+    .parceiros-conteudo p {
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .bnt-parceiro {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    /* INICIO */
+
+    .inicio {
+        grid-template-columns: 4fr 8fr;
+        margin-top: 6rem;
+        margin-bottom: 14rem;
+    }
+
+    .inicio-img {
+        max-width: 75%;
+        top: 33rem;
+    }
+
+    .inicio h1 {
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .inicio h1::before {
+        width: 10rem;
+        height: 0.875rem;
+        top: 4.1rem;
+    }
+
+    .inicio p {
+        margin-bottom: 0.75rem;
+        max-width: 44ch;
+    }
+
+    /* EMPREENDIMENTOS */
+
+    .empreendimentos {
+        padding: 6rem 0 10rem 0;
+        margin: 0;
+
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .empreendimentos h2 {
+        font-size: 2rem;
+        margin-bottom: 0rem;
+        max-width: 22ch;
+        margin-left: 2rem;
+    }
+
+    .empreendimentos p {
+        font-size: 0.875rem;
+        max-width: 50ch;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+    }
+
+    .card-group {
+        grid-area: 3/1;
+        gap: 1rem;
+        padding-left: 2rem;
+        margin-right: 0;
+    }
+
+    /* SOBRE */
+
+    .sobre {
+        padding: 0 0;
+        height: 100vh;
+    }
+
+    .sobre-conteudo {
+        flex-direction: column;
+        gap: 4rem;
+        padding-top: 8.5rem;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 2.5rem;
+    }
+
+    .sobre-conteudo p {
+        max-width: 47ch;
+    }
+
+    .sobre-conteudo img {
+        max-width: 70%;
+    }
+
+    /* PARCEIROS */
+
+    .parceiros {
+        padding: 2rem;
+        height: 100vh;
+    }
+
+    .parceiros-box {
+        background: url(../img/site/home/parceiros-home.jpg) top center;
+        background-size: cover;
+
+        max-width: 45rem;
+        height: 100%;
+
+        grid-template-columns: 1fr;
+        align-content: center;
+        padding: 4rem;
+    }
+
+    .parceiros-conteudo {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 720px) {
+    /* INICIO */
+
+    .inicio {
+        grid-template-columns: 1fr;
+        margin-top: 8rem;
+        margin-bottom: 12rem;
+    }
+
+    .inicio-img {
+        max-width: 100%;
+        top: 38rem;
+        /* transform: rotateY(180deg); */
+    }
+
+    .inicio h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .inicio h1::before {
+        width: 8rem;
+        height: 0.75rem;
+        top: 3.2rem;
+    }
+
+    .inicio p {
+        margin-bottom: 1rem;
+        max-width: 34ch;
+    }
+
+    /* EMPREENDIMENTOS */
+    .empreendimentos {
+        padding: 10rem 0rem 6rem 0;
+    }
+
+    .empreendimentos h2 {
+        font-size: 2rem;
+        max-width: 14ch;
+        margin-left: 1rem;
+    }
+
+    .empreendimentos p {
+        max-width: 34ch;
+        margin-left: 1rem;
+    }
+
+    .card-group {
+        padding-left: 1rem;
+    }
+
+    .card-group:last-child {
+        padding-right: 1rem;
+    }
+
+    /* SOBRE */
+
+    .sobre-conteudo {
+        padding-top: 10rem;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 2rem;
+    }
+
+    .sobre-conteudo img {
+        max-width: 100%;
+    }
+
+    /* PARCEIROS */
+
+    .parceiros {
+        padding: 1rem;
+    }
+
+    .parceiros-box {
+        padding: 1.5rem;
+    }
+
+    .parceiros-conteudo h2 {
+        font-size: 1.75rem;
+        max-width: 84.8mm;
+        margin-bottom: 0.75rem;
+    }
+
+    .parceiros-conteudo h2::before {
+        width: 11.6rem;
+        height: 0.75rem;
+        top: 4.5rem;
+        left: 3rem;
+    }
+
+    .parceiros-conteudo p {
+        font-size: 0.875rem;
+        max-width: 36ch;
+        margin-bottom: 1rem;
+    }
+}

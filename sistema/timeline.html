@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+
+    <title>Terras Buy</title>
+</head>
+
+<body>
+    <div class="dash-container">
+        <!-- BARRA LATERAL -->
+        <nav class="dash-sidebar">
+            <div class="perfil">
+                <img src="../css/img/sistema/foto-perfil.png" alt="">
+                <div class="cliente">
+                    <h1>Nome</h1>
+                    <span>Cliente</span>
+                </div>
+            </div>
+            <ul class="area1">
+                <li class="btn"><a class="btn-painel" href="./">Meu Painel</a></li>
+                <li class="btn"><a class="btn-lotes" href="./">Meus Lotes</a></li>
+                <li class="btn"><a class="btn-perfil" href="./">Dados Pessoais</a></li>
+                <li class="btn"><a class="btn-financeiro" href="./">Dados Financeiros</a></li>
+            </ul>
+            <ul class="area2">
+                <li class="btn"><a class="btn-suporte" href="./">Suporte</a></li>
+                <li class="btn"><a class="btn-sair" href="../index.html">Sair</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO -->
+        <div class="dash-conteudo">
+            <h1>Compras em andamento</h1>
+
+            <!-- TIMELINE -->
+            <section class="timeline">
+
+                <!-- INFORMAÇÕES -->
+                <div class="tl-info">
+                    <div class="tl-empreendimento">
+                        <span>Tipo do Empreendimento</span>
+                        <h2>Nome do Empreendimento</h2>
+                        <h3>Localidade</h3>
+                    </div>
+                    <div class="tl-quadra">
+                        <h2>Quadra X</h2>
+                        <h3>Lote Y</h3>
+                    </div>
+                    <div class="tl-corretor">
+                        <h2>Corretor</h2>
+                        <h3>Nome do Corretor</h3>
+                    </div>
+                    <div class="tl-status">
+                        <h2>Status da compra</h2>
+                        <h3>Em andamento</h3>
+                    </div>
+                </div>
+
+                <!-- PASSOS -->
+                <ul class="tl-passos">
+                    <li data-id="tab-1" class="passos p1">
+                        <span class="icon"></span>
+                        <div class="linha"></div>
+                        <h3>Agende uma visita</h3>
+                    </li>
+                    <li data-id="tab-3" class="passos p2">
+                        <span class="icon"></span>
+                        <div class="linha"></div>
+                        <h3>Conte sobre sua visita</h3>
+                    </li>
+                    <li data-id="tab-4" class="passos p3">
+                        <span class="icon"></span>
+                        <div class="linha"></div>
+                        <h3>Preencha seus dados</h3>
+                    </li>
+                    <li data-id="tab-5" class="passos p4">
+                        <span class="icon"></span>
+                        <div class="linha"></div>
+                        <h3>Preencha seus dados financeiros</h3>
+                    </li>
+                    <li data-id="tab-6" class="passos p5">
+                        <span class="icon"></span>
+                        <div class="linha"></div>
+                        <h3>Leia e assine o contrato</h3>
+                    </li>
+                    <li data-id="tab-7" class="passos p6">
+                        <span class="icon"></span>
+                        <div class="linha"></div>
+                        <h3>Envie seus documentos</h3>
+                    </li>
+                    <li data-id="tab-8" class="passos p7">
+                        <span class="icon"></span>
+                        <h3>O lote dos seus sonhos é seu</h3>
+                    </li>
+                </ul>
+
+                <!-- TABS -->
+                <div class="tl-tabs" id="tl-tabs">
+                    <!-- Agendamento -->
+                    <section class="tl-agendar active" id="tab-1">
+                        <h3>Agende uma visita</h3>
+                        <div class="agendar-grid">
+                            <div class="calendar" id="calendar">
+                                <div class="calendar-header">
+                                    <div class="date">
+                                        <span class="month-picker" id="month-picker"></span>
+                                        <span id="year"></span>
+                                    </div>
+                                    <div class="change-month">
+                                        <span id="prev-month"></span>
+                                        <span id="next-month"></span>
+                                    </div>
+                                </div>
+                                <div class="calendar-body">
+                                    <div class="calendar-week-day">
+                                        <div>D</div>
+                                        <div>S</div>
+                                        <div>T</div>
+                                        <div>Q</div>
+                                        <div>Q</div>
+                                        <div>S</div>
+                                        <div>S</div>
+                                    </div>
+                                    <div class="calendar-days"></div>
+                                </div>
+                            </div>
+                            <div class="ag-horario">
+                                <label class="radio">
+                                    <input type="radio" name="answer">
+                                    <p>09:00</p>
+                                    <p>às</p>
+                                    <p>10:00</p>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="answer">
+                                    <p>10:00</p>
+                                    <p>às</p>
+                                    <p>11:00</p>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="answer">
+                                    <p>11:00</p>
+                                    <p>às</p>
+                                    <p>12:00</p>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="answer">
+                                    <p>12:00</p>
+                                    <p>às</p>
+                                    <p>13:00</p>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="answer">
+                                    <p>13:00</p>
+                                    <p>às</p>
+                                    <p>14:00</p>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="answer">
+                                    <p>14:00</p>
+                                    <p>às</p>
+                                    <p>15:00</p>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="answer">
+                                    <p>15:00</p>
+                                    <p>às</p>
+                                    <p>16:00</p>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="answer">
+                                    <p>16:00</p>
+                                    <p>às</p>
+                                    <p>17:00</p>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="answer">
+                                    <p>17:00</p>
+                                    <p>às</p>
+                                    <p>18:00</p>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn-proximo">Agendar</button>
+                    </section>
+
+                    <!-- Mensagem de Agendamento -->
+                    <section class="tl-visita" id="tab-2">
+                        <div class="visita-msg">
+                            <div class="visita-texto">
+                                <h3>Esperamos por você!</h3>
+                                <p>Em breve um de nossos corretores entrará em contato para que possa te acompanhar durante à sua visita e te auxiliar em seus negócios na Terras Buy.</p>
+                                <button class="btn-ok">Ok</button>
+                            </div>
+                            <img src="../img/dashboard/aguardar-visita.png" alt="">
+                        </div>
+                        <div class="visita-acoes">
+                            <button class="btn-cancelar">Cancelar visita</button>
+                            <button class="btn-remarcar">Remarcar</button>
+                        </div>
+                    </section>
+
+                    <!-- Feedback -->
+                    <section class="tl-feedback" id="tab-3">
+                        <h3>Queremos sua opinião</h3>
+                        <div class="fb-conteudo">
+                            <div class="fb-perguntas">
+                                <div class="pergunta">
+                                    <h4>1. Lote</h4>
+                                    <p class="label">Você considera o lote visitado ideal para você?</p>
+                                    <div class="resposta">
+                                        <label class="radio">
+                                            <input type="radio" name="answer1">
+                                            Sim
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="answer1">
+                                            Não
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="pergunta">
+                                    <h4>2. Corretor</h4>
+                                    <p class="label">Como você classifica a sua experiência com o corretor?</p>
+                                    <div class="resposta">
+                                        <label class="radio">
+                                            <input type="radio" name="answer2">
+                                            Boa
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="answer2">
+                                            Indiferente
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="answer2">
+                                            Ruim
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-acoes">
+                                <button class="btn-cancelar">Desistir da Compra</button>
+                                <button class="btn-salvar">Salvar e Continuar</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Dados Pessoais-->
+                    <section class="tl-dados" id="tab-4">
+                        <h3>Preencha seus dados</h3>
+                        <section class="dados-form">
+                            <form class="form" action="#">
+                                <div class="form-pessoa">
+                                    <div>
+                                        <label for="nome">Nome Completo</label>
+                                        <input type="text" id="nome" name="nome">
+                                    </div>
+                                    <div>
+                                        <label for="cpf">CPF</label>
+                                        <input type="text" id="cpf" name="cpf">
+                                    </div>
+                                    <div>
+                                        <label for="tel">Telefone</label>
+                                        <input type="text" id="tel" name="tel" class="form-control">
+                                    </div>
+                                    <div>
+                                        <label for="email">E-mail</label>
+                                        <input type="email" id="email" name="email">
+                                    </div>
+                                    <div>
+                                        <label for="estado">Estado Civíl</label>
+                                        <select class="select" type="text" id="estado" name="estado">
+                                            <option value="solteiro">Solteiro</option>
+                                            <option value="casado">Casado</option>
+                                            <option value="uniao">União Estável</option>
+                                            <option value="divorciado">Divorciado</option>
+                                            <option value="divorciado">Viúvo</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="profissao">Profissão</label>
+                                        <input type="text" id="profissao" name="profissao">
+                                    </div>
+                                </div>
+                                <div class="form-endereco">
+                                    <div class="form-endereco1">
+                                        <div>
+                                            <label for="cep">CEP</label>
+                                            <input type="text" id="cep" name="cep">
+                                        </div>
+                                        <div>
+                                            <label for="logradouro">Logradouro</label>
+                                            <input type="text" id="logradouro" name="logradouro">
+                                        </div>
+                                        <div>
+                                            <label for="numero">Número</label>
+                                            <input type="text" id="numero" name="numero">
+                                        </div>
+                                        <div>
+                                            <label for="complemento">Complemento</label>
+                                            <input type="text" id="complemento" name="complemento">
+                                        </div>
+                                    </div>
+                                    <div class="form-endereco2">
+                                        <div>
+                                            <label for="bairro">Bairro</label>
+                                            <input type="text" id="bairro" name="bairro">
+                                        </div>
+                                        <div>
+                                            <label for="cidade">Cidade</label>
+                                            <input type="text" id="cidade" name="cidade">
+                                        </div>
+                                        <div>
+                                            <label for="uf">Estado</label>
+                                            <input type="text" id="uf" name="uf">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                        <div class="dados-acoes">
+                            <button class="btn-cancelar">Desistir da Compra</button>
+                            <button class="btn-salvar">Salvar e Continuar</button>
+                        </div>
+                    </section>
+
+                    <!-- Dados Financeiros -->
+                    <section class="tl-financeiro" id="tab-5">
+                        <h3>Preencha seus dados financeiros</h3>
+                        <section class="financeiro-form">
+                            <form class="fin-form" action="./">
+                                <div class="form-lote">
+                                    <div class="valor-lote">
+                                        <div>
+                                            <label for="lote">Lote</label>
+                                            <input type="text" id="lote" name="lote">
+                                        </div>
+                                        <div>
+                                            <label for="valor">Valor do Lote</label>
+                                            <input type="text" id="valor" name="valor">
+                                        </div>
+                                        <div>
+                                            <label for="plano">Tipo de Plano</label>
+                                            <input type="text" id="plano" name="plano">
+                                        </div>
+                                    </div>
+                                    <h4>Entrada</h4>
+                                    <div class="entrada-lote">
+                                        <div class="valor-entrada">
+                                            <label for="valor-entrada">Valor da Entrada</label>
+                                            <input type="text" id="valor-entrada" name="valor-entrada">
+                                        </div>
+                                        <div>
+                                            <label for="percentual">Percentual</label>
+                                            <input type="text" id="percentual" name="percentual">
+                                        </div>
+                                        <div>
+                                            <label for="parcelas-entrada">Núm. de Parcelas</label>
+                                            <input type="text" id="parcelas-entrada" name="parcelas-entrada">
+                                        </div>
+                                        <div>
+                                            <label for="valor-parcela">Valor da Parcela</label>
+                                            <input type="text" id="valor-parcela" name="valor-parcela">
+                                        </div>
+                                        <div>
+                                            <label for="vencimento">1º Vencimento</label>
+                                            <input type="text" id="vencimento" name="vencimento">
+                                        </div>
+                                    </div>
+                                    <h4>Financiamento</h4>
+                                    <div class="financiamento-lote">
+                                        <div>
+                                            <label for="valor-restante">Valor Restante</label>
+                                            <input type="text" id="valor-restante" name="valor-restante">
+                                        </div>
+                                        <div>
+                                            <label for="parcelas-restante">Núm. de Parcelas</label>
+                                            <input type="text" id="parcelas-restante" name="parcelas-restante">
+                                        </div>
+                                        <div>
+                                            <label for="valor-parc-restante">Valor da Parcela</label>
+                                            <input type="text" id="valor-parc-restante" name="valor-parc-restante">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-pagamento">
+                                    <h5>Método de Pagamento</h5>
+                                    <div class="metodo-pagamento">
+                                        <div class="credito">
+                                            <input type="radio" valor="credito" name="metodo" id="metodo">
+                                            <label for="credito">Cartão de Crédito</label>
+                                        </div>
+                                        <div class="boleto">
+                                            <input type="radio" valor="boleto" name="metodo" id="metodo">
+                                            <label for="boleto">Boleto Bancário</label>
+                                        </div>
+                                    </div>
+                                    <h4>Dados do cartão de crédito</h4>
+                                    <div class="dados-cartao">
+                                        <div>
+                                            <label for="num-cartao">Número do cartão</label>
+                                            <input type="text" id="num-cartao" name="num-cartao">
+                                        </div>
+                                        <div>
+                                            <label for="validade">Validade</label>
+                                            <input type="text" id="validade" name="validade">
+                                        </div>
+                                        <div>
+                                            <label for="nome-cartao">Nome impresso no cartão</label>
+                                            <input type="text" id="nome-cartao" name="nome-cartao">
+                                        </div>
+                                        <div>
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="financeiro-acoes">
+                                    <button class="btn-cancelar">Desistir da Compra</button>
+                                    <button class="btn-salvar">Salvar e Continuar</button>
+                                </div>
+                            </form>
+                        </section>
+                    </section>
+
+                    <!-- Contrato -->
+                    <section class="tl-contrato" id="tab-6">
+                        <div class="contrato-grid">
+                            <h3>Leia e assine o seu contrato</h3>
+                            <img src="../css/img/sistema/contrato.png" alt="">
+                        </div>
+                        <div class="contrato-acoes">
+                            <button class="btn-cancelar">Desistir da Compra</button>
+                            <div class="contrato-botoes">
+                                <button class="btn-contrato">Baixar Contrato</button>
+                                <button class="btn-salvar">Assinar por e-mail</button>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Documentos -->
+                    <section class="tl-documentos" id="tab-7">
+                        <h3>Envie seus documentos</h3>
+
+                        <div class="doc-conteudo">
+                            <h4>Faça o upload dos documentos escaneados</h4>
+                            <form class="doc-escolha" action="">
+                                <span>Identidade ou CNH</span>
+                                <label for="doc-identidade">
+                                    <span class="arquivo-escolhido">Nenhum arquivo escolhido</span>
+                                    <div class="img-upload"></div>
+                                </label>
+                                <input type="file" name="doc-identidade" id="doc-identidade" />
+
+                                <span>Comprovante de Residência</span>
+                                <label for="doc-residencia">
+                                    <span class="arquivo-escolhido">Nenhum arquivo escolhido</span>
+                                    <div class="img-upload"></div>
+                                </label>
+                                <input type="file" name="doc-residencia" id="doc-residencia" />
+
+                                <span>Comprovante de Renda</span>
+                                <label for="doc-renda">
+                                    <span class="arquivo-escolhido">Nenhum arquivo escolhido</span>
+                                    <div class="img-upload"></div>
+                                </label>
+                                <input type="file" name="doc-renda" id="doc-renda" />
+                            </form>
+                            <div class="documentos-acoes">
+                                <button class="btn-proximo">Enviar</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Mensagem Final -->
+                    <section class="tl-final" id="tab-8">
+                        <div class="final-msg">
+                            <div class="final-texto">
+                                <h3>Agora é só aguardar!</h3>
+                                <p>Faremos a verificação dos seus documentos e do contrato e vamos te enviar uma mensagem quando tudo estiver finalizado!</p>
+                                <button class="btn-ok">Ok</button>
+                            </div>
+                            <img src="../css/img/sistema/final.png" alt="">
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="../js/calendario.js"></script>
+    <script src="../js/timeline.js"></script>
+    <script src="../js/cep.js"></script>
+    <script type="text/javascript">
+        $("#cpf").mask("000.000.000-00");
+        $("#tel").mask("(00) 00000-0000");
+        $("#cep").mask("00000-000");
+    </script>
+</body>
+
+</html>

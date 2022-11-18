@@ -1,0 +1,292 @@
+/* APRESENTAÇÃO */
+
+.emp-apresentacao {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 4rem;
+    align-items: end;
+    margin-bottom: 10rem;
+}
+
+.emp-apresentacao > div {
+    grid-column: 2;
+}
+
+.apresentacao-texto hgroup span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--s2);
+}
+
+.apresentacao-texto hgroup h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--p4);
+    position: relative;
+}
+
+.apresentacao-texto hgroup h1::before {
+    content: "";
+    display: inline-block;
+    width: 488px;
+    height: 1.5rem;
+    border-radius: 4px;
+    background: var(--p1);
+    position: absolute;
+    top: 2rem;
+    left: -4px;
+    z-index: -1;
+}
+
+.apresentacao-texto hgroup p {
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--c80);
+    margin-top: 0.25rem;
+}
+
+.apresentacao-texto hgroup {
+    margin-bottom: 2rem;
+}
+
+.apresentacao-texto p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--c70);
+
+    max-width: 40ch;
+    margin-bottom: 1.5rem;
+}
+
+.apresentacao-texto > div {
+    margin-bottom: 4rem;
+}
+
+.apresentacao-texto > div h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--c60);
+    margin-bottom: 0.75rem;
+}
+
+.apresentacao-texto > div div {
+    display: flex;
+    gap: 4rem;
+}
+
+.apresentacao-texto > div div p {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--c80);
+
+    display: flex;
+    align-items: center;
+}
+
+.apresentacao-texto > div div p::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.75rem;
+}
+
+.apresentacao-medida {
+    background-image: url(../../img/site/empreendimentos/avoredo-tripui/icones/medida1.png);
+    background-repeat: no-repeat;
+}
+
+.apresentacao-valor {
+    background-image: url(../../img/site/empreendimentos/avoredo-tripui/icones/dinheiro1.png);
+    background-repeat: no-repeat;
+}
+
+.apresentacao-texto button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.apresentacao-texto button::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../../img/site/home/icones/agendar.png);
+}
+
+/* DESTAQUES */
+
+.emp-destaques {
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7rem;
+    padding: 3rem 7rem;
+    margin-bottom: 6rem;
+}
+
+.emp-destaques p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    color: var(--a1);
+}
+
+.emp-destaques strong {
+    color: var(--a2);
+    font-weight: 600;
+}
+
+/* FOTOS */
+
+.logo-emp {
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+/* INFORMAÇÕES */
+
+.emp-informacoes {
+    padding: 6rem 3rem;
+}
+
+.emp-informacoes h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--a1);
+
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-box {
+    background: var(--c00);
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+}
+
+.emp-informacoes ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.info-box h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--a1);
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.info-box p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--c70);
+}
+
+/* REGIÃO */
+
+.emp-regiao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 3rem;
+}
+
+.emp-regiao h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--a1);
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.emp-regiao p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--c80);
+    max-width: 45ch;
+    margin-bottom: 1.25rem;
+}
+
+/* BANNER */
+
+.emp-banner {
+    border-radius: 1rem;
+    background-color: var(--p4);
+    margin: 8rem 0;
+}
+
+.emp-banner h2 {
+    font-size: 2rem;
+    color: var(--c00);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.emp-banner strong {
+    color: var(--p1);
+}
+
+/* MAPA */
+
+.emp-mapa {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    position: relative;
+}
+
+.mapa-header {
+    width: 80rem;
+    height: 20rem;
+    background: url(/css/img/site/empreendimentos/cabeçalho.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 4rem;
+    z-index: -1;
+}
+
+.mapa-arvoredo-tripui {
+    background-image: url(/css/img/site/empreendimentos/avoredo-tripui/masterplan/planta-arvoredo-tripui.png);
+    background-repeat: repeat;
+    background-size: 100%;
+    max-width: 1312px;
+}
+
+.quadra-info {
+    background: var(--b3);
+    max-width: max-content;
+    height: max-content;
+    margin: 9rem auto 0 auto;
+    padding: 0.25rem;
+    border-radius: 10px;
+    border: 1px solid var(--c40);
+}
+
+.escolher-quadra {
+    background: var(--c00);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--c30);
+
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--c70);
+}
+
+.escolher-quadra:invalid {
+    color: var(--c30);
+}
+
+.escolher-quadra::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 6px;
+    background-color: black;
+}

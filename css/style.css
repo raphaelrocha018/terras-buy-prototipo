@@ -1,0 +1,25 @@
+/* COMPONENTES */
+@import url("componentes/tipografia.css");
+@import url("componentes/cores.css");
+@import url("componentes/componentes.css");
+
+/* GLOBAL */
+@import url("global/global.css");
+@import url("global/header.css");
+@import url("global/footer.css");
+
+/* SITE */
+@import url("site/home.css");
+
+/* EMPREENDIMENTOS */
+@import url("site/empreendimentos/villa-da-serra.css");
+@import url("site/empreendimentos/quadra.css");
+@import url("site/empreendimentos/arvoredo-tripui.css");
+
+/* SISTEMA */
+@import url("sistema/dashboard.css");
+
+/* TIMELINE */
+@import url("sistema/timeline/timeline.css");
+@import url("sistema/timeline/tabs.css");
+@import url("sistema/timeline/calendar.css");

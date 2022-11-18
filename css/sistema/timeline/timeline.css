@@ -1,0 +1,281 @@
+.timeline {
+    background-color: #fff;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 32px 32px 32px 48px;
+    position: relative;
+}
+
+.timeline:before {
+    content: "";
+    width: 5px;
+    height: 168px;
+    border-radius: 10px;
+    background-color: #2db478;
+    position: absolute;
+    top: 32px;
+    left: 12px;
+}
+
+/* INFORMAÇÕES */
+
+.tl-info {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 76px;
+    margin-bottom: 32px;
+}
+
+.tl-empreendimento > span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0094c1;
+    margin-bottom: 4px;
+}
+
+.tl-empreendimento > h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #00411e;
+}
+
+.tl-empreendimento > h3 {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    color: #646464;
+}
+
+.tl-quadra > h2 {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    color: #646464;
+}
+
+.tl-quadra > h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2db478;
+}
+
+.tl-corretor > h2 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #006937;
+}
+
+.tl-corretor > h3 {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    color: #646464;
+}
+
+.tl-status > h2 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #006937;
+}
+
+.tl-status > h3 {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    color: #646464;
+}
+
+/* PASSO-A-PASSO */
+
+.tl-passos {
+    display: flex;
+    gap: 16px;
+}
+
+.passos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+
+    max-width: 128px;
+    height: 72px;
+    cursor: pointer;
+}
+
+.passos h3 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #afafaf;
+    max-width: 110px;
+}
+
+.linha {
+    width: 61%;
+    height: 3px;
+    background: url(../../img/sistema/timeline/linha-off.svg);
+    background-repeat: repeat;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.p1 .icon {
+    background: url(../../img/sistema/timeline/01-off.png);
+}
+
+.p2 .icon {
+    background: url(../../img/sistema/timeline/02-off.png);
+}
+
+.p3 .icon {
+    background: url(../../img/sistema/timeline/03-off.png);
+}
+
+.p4 .icon {
+    background: url(../../img/sistema/timeline/04-off.png);
+}
+
+.p5 .icon {
+    background: url(../../img/sistema/timeline/05-off.png);
+}
+
+.p6 .icon {
+    background: url(../../img/sistema/timeline/06-off.png);
+}
+
+.p7 .icon {
+    background: url(../../img/sistema/timeline/07-off.png);
+}
+
+/* PASSOS HOVER */
+
+.passos:hover > * {
+    transition: 0.5s;
+}
+
+.passos:hover > h3 {
+    color: #006937;
+}
+
+.p1:hover > .icon {
+    background: url(../../img/sistema/timeline/Hover/01-hover.png);
+}
+
+.p2:hover > .icon {
+    background: url(../../img/sistema/timeline/Hover/02-hover.png);
+}
+
+.p3:hover > .icon {
+    background: url(../../img/sistema/timeline/Hover/03-hover.png);
+}
+
+.p4:hover > .icon {
+    background: url(../../img/sistema/timeline/Hover/04-hover.png);
+}
+
+.p5:hover > .icon {
+    background: url(../../img/sistema/timeline/Hover/05-hover.png);
+}
+
+.p6:hover > .icon {
+    background: url(../../img/sistema/timeline/Hover/06-hover.png);
+}
+
+.p7:hover > .icon {
+    background: url(../../img/sistema/timeline/Hover/07-hover.png);
+}
+
+/* PASSOS ACTIVE */
+
+.passos.active > h3 {
+    color: #006937;
+}
+
+.p1.active > .icon {
+    background: url(../../img/sistema/timeline/01-on.png);
+}
+
+.p2.active > .icon {
+    background: url(../../img/sistema/timeline/02-on.png);
+}
+
+.p3.active > .icon {
+    background: url(../../img/sistema/timeline/03-on.png);
+}
+
+.p4.active > .icon {
+    background: url(../../img/sistema/timeline/04-on.png);
+}
+
+.p5.active > .icon {
+    background: url(../../img/sistema/timeline/05-on.png);
+}
+
+.p6.active > .icon {
+    background: url(../../img/sistema/timeline/06-on.png);
+}
+
+.p7.active > .icon {
+    background: url(../../img/sistema/timeline/07-on.png);
+}
+
+/* PASSOS COMPLETO */
+
+.passos.completo > h3 {
+    color: #000;
+}
+
+.passos.completo > .linha {
+    background: url(../../img/sistema/timeline/linha-completo.svg);
+    transition: 0.3s;
+}
+
+.p1.completo > .icon {
+    background: url(../../img/sistema/timeline/01-completo.png);
+}
+
+.p2.completo > .icon {
+    background: url(../../img/sistema/timeline/02-completo.png);
+}
+
+.p3.completo > .icon {
+    background: url(../../img/sistema/timeline/03-completo.png);
+}
+
+.p4.completo > .icon {
+    background: url(../../img/sistema/timeline/04-completo.png);
+}
+
+.p5.completo > .icon {
+    background: url(../../img/sistema/timeline/05-completo.png);
+}
+
+.p6.completo > .icon {
+    background: url(../../img/sistema/timeline/06-completo.png);
+}
+
+.p7.completo > .icon {
+    background: url(../../img/sistema/timeline/07-completo.png);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1568px) {
+    .passos {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 1355px) {
+    .tl-info {
+        gap: 64px;
+    }
+
+    .tl-passos {
+        gap: 8px;
+    }
+}
