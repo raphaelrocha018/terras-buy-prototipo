@@ -1,0 +1,17 @@
+.q-header {
+    display: block;
+    width: 94vw;
+    height: 19rem;
+    background: url(/css/img/site/empreendimentos/cabeçalho.png) no-repeat;
+    position: absolute;
+}
+
+.quadra {
+    margin-top: 8rem;
+    position: relative;
+}
+
+.quadra-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
