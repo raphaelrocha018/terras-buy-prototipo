@@ -11,7 +11,7 @@
     <title>Arvoredo do Tripuí - Melhores empreendimentos imobiliários da Terras Buy</title>
 </head>
 
-<body class="home">
+<body class="site">
     <!-- CABEÇALHO -->
     <header id="header" class="container">
         <nav class="header-navbar">
@@ -24,32 +24,32 @@
                 <li><a href="#rodape">Contatos</a></li>
             </menu>
             <menu class="header-btns">
-                <a href="./login/login.html" class="btn-login">Entrar</a>
-                <a href="./login/cadastro.html" class="btn-cadastro">Cadastre-se</a>
+                <a href="./login/login.html" class="btn2">Entrar</a>
+                <a href="./login/cadastro.html" class="btn1">Cadastre-se</a>
             </menu>
         </nav>
     </header>
 
     <!-- CONTEÚDO -->
     <main class="container">
-        <section class="emp-apresentacao">
-            <picture>
+        <section class="emp-intro">
+            <picture class="intro-slide">
                 <img src="../../../css/img/site/empreendimentos/avoredo-tripui/imagem-01.png" alt="">
             </picture>
-            <div class="apresentacao-texto">
+            <div class="intro-conteudo">
                 <hgroup>
-                    <span>Condomínio Fechado</span>
-                    <h1>Arvoredo do Tripuí</h1>
-                    <p>Aramantina - MG</p>
+                    <span class="intro-tipo">Condomínio Fechado</span>
+                    <h1 class="intro-nome">Arvoredo do Tripuí</h1>
+                    <p class="intro-local">Aramantina - MG</p>
                 </hgroup>
-                <p>Loteamento fechado no distrito de Aramantina, próximo à Ouro Preto. Envolto por uma natureza exuberante, com bosques, trilhas ecológicas, vistas de encher os olhos e o cantar dos pássaros.</p>
-                <div>
-                    <h3>A partir de</h3>
+                <p class="intro-texto">Loteamento fechado no distrito de Aramantina, próximo à Ouro Preto. Envolto por uma natureza exuberante, com bosques, trilhas ecológicas, vistas de encher os olhos e o cantar dos pássaros.</p>
+                <details open class="intro-detalhes">
+                    <summary>A partir de</summary>
                     <div>
-                        <p class="apresentacao-medida">1000m²</p>
-                        <p class="apresentacao-valor">R$ 200 mil</p>
+                        <p class="detalhes-medida">1000m²</p>
+                        <p class="detalhes-valor">R$ 200 mil</p>
                     </div>
-                </div>
+                </details>
                 <button class="btn1"><a href="../../../sistema/login/login.html">Agende uma visita</a></button>
             </div>
         </section>
@@ -184,20 +184,67 @@
                     <rect class="cls-1" width="1312" height="996" />
                 </svg>
             </map>
-            <div class="quadra-info">
-                <select required class="escolher-quadra" name="escolher-quadra">
-                    <option value="">Número da Quadra</option>
-                    <option value="06">Quadra 06</option>
-                    <option value="07">Quadra 07</option>
-                    <option value="09">Quadra 09</option>
-                    <option value="10">Quadra 10</option>
-                    <option value="11">Quadra 11</option>
-                    <option value="13">Quadra 13</option>
-                    <option value="15">Quadra 15</option>
-                    <option value="16">Quadra 16</option>
-                </select>
-                <table>
-
+            <div class="quadra">
+                <div class="quadra-escolha">Selecione uma quadra</div>
+                <ul class="quadras-disponiveis">
+                    <li>06</li>
+                    <li>07</li>
+                    <li>09</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>13</li>
+                    <li>15</li>
+                    <li>16</li>
+                </ul>
+                <table class="quadra-infos">
+                    <tr>
+                        <th>Lote</th>
+                        <th>Frente</th>
+                        <th>Fundo</th>
+                        <th>Área</th>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
                 </table>
             </div>
         </section>

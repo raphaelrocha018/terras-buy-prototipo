@@ -1,6 +1,6 @@
 /* APRESENTAÇÃO */
 
-.emp-apresentacao {
+.emp-intro {
     display: grid;
     grid-template-columns: 5fr 7fr;
     gap: 4rem;
@@ -8,24 +8,24 @@
     margin-bottom: 10rem;
 }
 
-.emp-apresentacao > div {
-    grid-column: 2;
+.emp-intro hgroup {
+    margin-bottom: 2rem;
 }
 
-.apresentacao-texto hgroup span {
+.intro-tipo {
     font-size: 1rem;
     font-weight: 600;
     color: var(--s2);
 }
 
-.apresentacao-texto hgroup h1 {
+.intro-nome {
     font-size: 3rem;
     font-weight: 800;
-    color: var(--p4);
+    color: var(--p5);
     position: relative;
 }
 
-.apresentacao-texto hgroup h1::before {
+.intro-nome::before {
     content: "";
     display: inline-block;
     width: 488px;
@@ -38,7 +38,7 @@
     z-index: -1;
 }
 
-.apresentacao-texto hgroup p {
+.intro-local {
     font-size: 1.25rem;
     font-style: italic;
     font-weight: 400;
@@ -46,37 +46,33 @@
     margin-top: 0.25rem;
 }
 
-.apresentacao-texto hgroup {
-    margin-bottom: 2rem;
-}
-
-.apresentacao-texto p {
+.intro-texto {
     font-size: 1rem;
-    line-height: 1.25;
+    line-height: 1.5;
     font-weight: 400;
     color: var(--c70);
 
-    max-width: 40ch;
+    max-width: 50ch;
     margin-bottom: 1.5rem;
 }
 
-.apresentacao-texto > div {
+.intro-detalhes {
     margin-bottom: 4rem;
 }
 
-.apresentacao-texto > div h3 {
+.intro-detalhes summary {
     font-size: 1rem;
     font-weight: 600;
     color: var(--c60);
     margin-bottom: 0.75rem;
 }
 
-.apresentacao-texto > div div {
+.intro-detalhes div {
     display: flex;
     gap: 2rem;
 }
 
-.apresentacao-texto > div div p {
+.intro-detalhes p {
     font-size: 1rem;
     font-weight: 500;
     color: var(--c80);
@@ -90,7 +86,7 @@
     align-items: center;
 }
 
-.apresentacao-texto > div div p::before {
+.intro-detalhes p::before {
     content: "";
     display: inline-block;
     width: 1.5rem;
@@ -98,28 +94,26 @@
     margin-right: 0.75rem;
 }
 
-.apresentacao-medida::before {
+.detalhes-medida::before {
     background-image: url(../../img/site/empreendimentos/avoredo-tripui/icones/medida2.png);
     background-repeat: no-repeat;
 }
 
-.apresentacao-valor::before {
+.detalhes-valor::before {
     background-image: url(../../img/site/empreendimentos/avoredo-tripui/icones/dinheiro2.png);
     background-repeat: no-repeat;
 }
 
-.apresentacao-texto button {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.apresentacao-texto button::before {
+.intro-conteudo button::before {
     content: "";
     display: inline-block;
     width: 24px;
     height: 24px;
-    background: url(../../img/site/home/icones/agendar.png);
+    background: url(../../img/site/icones/agendar.png);
+}
+
+.intro-conteudo button:hover::before {
+    background: url(../../img/site/icones/agendar-hover.png);
 }
 
 /* DESTAQUES */
@@ -129,26 +123,31 @@
     border-radius: 1rem;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 
+    padding: 3rem 7rem;
+    margin-bottom: 6rem;
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 7rem;
-    padding: 3rem 7rem;
-    margin-bottom: 6rem;
 }
 
 .emp-destaques p {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 0.25rem;
-    color: var(--a1);
+    color: var(--p4);
 }
 
 .emp-destaques strong {
-    color: var(--a2);
+    color: var(--p2);
     font-weight: 600;
 }
 
 /* FOTOS */
+
+.emp-fotos {
+    margin-bottom: 6rem;
+}
 
 .logo-emp {
     margin: 0 auto;
@@ -158,13 +157,14 @@
 /* INFORMAÇÕES */
 
 .emp-informacoes {
-    padding: 6rem 3rem;
+    padding: 0 3rem;
+    margin-bottom: 6rem;
 }
 
 .emp-informacoes h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--a1);
+    color: var(--p4);
 
     margin-left: 2rem;
     margin-bottom: 3rem;
@@ -186,14 +186,14 @@
 .info-box h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--a1);
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
+    color: var(--p4);
+
+    margin: 0.25rem 0;
 }
 
 .info-box p {
     font-size: 0.875rem;
-    font-weight: 400;
+    line-height: 1.5;
     color: var(--c70);
 }
 
@@ -208,16 +208,17 @@
 .emp-regiao h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--a1);
+
+    color: var(--p4);
     margin-bottom: 2rem;
     margin-left: 2rem;
 }
 
 .emp-regiao p {
     font-size: 1rem;
-    line-height: 1.25;
-    font-weight: 400;
+    line-height: 1.5;
     color: var(--c70);
+
     max-width: 45ch;
     margin-bottom: 1.25rem;
 }
@@ -226,13 +227,15 @@
 
 .emp-banner {
     border-radius: 1rem;
-    background-color: var(--p4);
+    background-color: var(--p5);
     margin: 8rem 0;
 }
 
 .emp-banner h2 {
     font-size: 2rem;
+    font-weight: 700;
     color: var(--c00);
+
     text-align: center;
     padding: 3rem 0;
 }
@@ -245,7 +248,7 @@
 
 .emp-mapa {
     display: grid;
-    grid-template-columns: 7fr 5fr;
+    grid-template-columns: 8fr 4fr;
     position: relative;
 }
 
@@ -262,40 +265,90 @@
 
 .mapa-arvoredo-tripui {
     background-image: url(/css/img/site/empreendimentos/avoredo-tripui/masterplan/planta-arvoredo-tripui.png);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: 100%;
     max-width: 1312px;
 }
 
-.quadra-info {
+.quadra {
     background: var(--b3);
     max-width: max-content;
     height: max-content;
     margin: 9rem auto 0 auto;
     padding: 0.25rem;
     border-radius: 10px;
-    border: 1px solid var(--c40);
+    border: 1px solid var(--c30);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.escolher-quadra {
+.quadra-escolha {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+
     background: var(--c00);
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    border: 1px solid var(--c30);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 
     font-size: 0.875rem;
-    font-weight: 400;
-    color: var(--c70);
+    color: var(--c40);
 }
 
-.escolher-quadra:invalid {
-    color: var(--c30);
-}
-
-.escolher-quadra::after {
+.quadra-escolha::after {
     content: "";
     display: inline-block;
     width: 12px;
     height: 6px;
-    background-color: black;
+    background: url(../../img/site/icones/seta.png) no-repeat;
+}
+
+.quadra-escolha:hover::after {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.quadras-disponiveis {
+    display: none;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.quadras-disponiveis li {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 1.5rem;
+    color: var(--c70);
+}
+
+.quadras-disponiveis li:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.quadras-disponiveis li:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.quadras-disponiveis li:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.quadra-infos {
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.quadra-infos th {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--c70);
+    padding: 0.75rem 1rem;
+}
+
+@media (max-width: 720px) {
+    .emp-mapa {
+        grid-template-columns: 1fr;
+    }
 }
