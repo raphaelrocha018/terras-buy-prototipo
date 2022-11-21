@@ -255,7 +255,7 @@
 .mapa-header {
     width: 80rem;
     height: 20rem;
-    background: url(/css/img/site/empreendimentos/cabeçalho.png);
+    background: url(/css/img/site/empreendimentos/cabecalho.png);
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
@@ -326,7 +326,7 @@
     background: rgba(255, 255, 255, 0.75);
 }
 
-.quadras-tabela {
+.quadra-tabela {
     margin-top: 0.5rem;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
@@ -372,4 +372,67 @@ tbody td + td {
     .emp-mapa {
         grid-template-columns: 1fr;
     }
+
+    .quadra {
+        margin: 2rem auto 0 auto;
+    }
+}
+
+/* SIMULADOR */
+
+.emp-simulador {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.emp-simulador h3 {
+    grid-column: 2;
+}
+
+.simulador-container {
+    grid-column: 2;
+    background: var(--c05);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.simulador-container label {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--c60);
+    margin-left: 0.25rem;
+}
+
+.simulador-container input {
+    height: 2.5rem;
+    border-radius: 0.25rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.simulador-escolha > div,
+.simluador-entrada > div,
+.simulador-financiamento > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.simulador-escolha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.simulador-escolha input {
+    background-color: var(--c00);
+}
+
+@media (max-width: 720px) {
+    grid-template-columns: 1fr;
 }
