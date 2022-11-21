@@ -389,11 +389,22 @@ tbody td + td {
 }
 
 .emp-simulador h3 {
-    grid-column: 2;
+    /* grid-column: 2; */
+
+    font-size: 1.5rem;
+    color: var(--p4);
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+}
+
+.emp-simulador h4 {
+    font-size: 1rem;
+    color: var(--p3);
+    margin: 0.75rem 0 0.25rem 2rem;
 }
 
 .simulador-container {
-    grid-column: 2;
+    grid-column: 1;
     background: var(--c05);
     border-radius: 1rem;
     padding: 2rem 1.5rem 1.5rem 1.5rem;
@@ -401,7 +412,7 @@ tbody td + td {
 }
 
 .simulador-container label {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 400;
     color: var(--c60);
     margin-left: 0.25rem;
@@ -410,13 +421,19 @@ tbody td + td {
 .simulador-container input {
     height: 2.5rem;
     border-radius: 0.25rem;
-
+    border: 1px solid var(--c20);
     font-size: 1rem;
     font-weight: 500;
 }
 
+.simulador-container input:focus {
+    outline: none;
+    background: #fff;
+    border: solid 1px var(--p2);
+}
+
 .simulador-escolha > div,
-.simluador-entrada > div,
+.simulador-entrada > div,
 .simulador-financiamento > div {
     display: flex;
     flex-direction: column;
@@ -427,10 +444,28 @@ tbody td + td {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    padding-inline: 1rem;
 }
 
 .simulador-escolha input {
     background-color: var(--c00);
+}
+
+.simulador-entrada,
+.simulador-financiamento {
+    background-color: var(--c00);
+    border-radius: 0.5rem;
+    border: 1px solid var(--c10);
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.simulador-entrada input,
+.simulador-financiamento input {
+    background-color: var(--c05);
 }
 
 @media (max-width: 720px) {
