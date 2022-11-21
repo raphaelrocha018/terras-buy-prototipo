@@ -263,13 +263,6 @@
     z-index: -1;
 }
 
-.mapa-arvoredo-tripui {
-    /* background-image: url(/css/img/site/empreendimentos/avoredo-tripui/masterplan/planta-arvoredo-tripui.png); */
-    background-repeat: no-repeat;
-    background-size: 100%;
-    max-width: 1312px;
-}
-
 .quadra {
     background: var(--b3);
     max-width: max-content;
@@ -333,18 +326,46 @@
     background: rgba(255, 255, 255, 0.75);
 }
 
-.quadra-infos {
-    background: rgba(255, 255, 255, 0.5);
+.quadras-tabela {
     margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
+    border-collapse: collapse;
     text-align: center;
 }
 
-.quadra-infos th {
+thead th {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--c50);
+
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.875rem 1rem;
+    width: 5rem;
+}
+
+thead .th-1 {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+thead .th-4 {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+tbody td {
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--c70);
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
+}
+
+tbody td + td {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 720px) {
