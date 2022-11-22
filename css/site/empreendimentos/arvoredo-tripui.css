@@ -192,13 +192,13 @@
 @media (max-width: 720px) {
     .emp-intro {
         grid-template-columns: 1fr;
-        position: relative;
         margin-bottom: 3rem;
+        gap: 0;
     }
 
     .emp-intro picture {
         position: absolute;
-        top: -156px;
+        top: 0px;
         z-index: -1;
     }
 
