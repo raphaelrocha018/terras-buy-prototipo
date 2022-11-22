@@ -204,7 +204,7 @@
 
     .intro-conteudo {
         background: var(--c10);
-        margin-top: 24rem;
+        /* margin-top: 24rem; */
         padding: 2.5rem 1.5rem;
         border-radius: 1.5rem 1.5rem 0 0;
     }
