@@ -313,6 +313,12 @@
     }
 }
 
+@media (max-width: 720px) {
+    .emp-destaques {
+        display: none;
+    }
+}
+
 /* FOTOS */
 
 .emp-fotos {
