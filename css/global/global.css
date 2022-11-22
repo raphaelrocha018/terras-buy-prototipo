@@ -64,8 +64,8 @@ summary::-webkit-details-marker {
     }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 720px) {
     .container {
-        padding: 0 1rem;
+        padding: 0 0;
     }
 }

@@ -1,4 +1,4 @@
-/* APRESENTAÇÃO */
+/* INTRO */
 
 .emp-intro {
     display: grid;
@@ -116,6 +116,144 @@
     background: url(../../img/site/icones/agendar-hover.png);
 }
 
+/* RESPONSIVO INTRO*/
+
+@media (max-width: 1440px) {
+    .emp-intro {
+        margin-bottom: 6rem;
+    }
+
+    .intro-tipo {
+        font-size: 0.875rem;
+    }
+
+    .intro-nome {
+        font-size: 2.5rem;
+    }
+
+    .intro-nome::before {
+        width: 25.5rem;
+        height: 1rem;
+    }
+
+    .intro-local {
+        font-size: 1.125rem;
+    }
+
+    .intro-texto {
+        font-size: 0.875rem;
+    }
+
+    .intro-detalhes summary {
+        font-size: 0.875rem;
+    }
+
+    .intro-detalhes div {
+        gap: 1.5rem;
+    }
+
+    .intro-detalhes p {
+        font-size: 0.875rem;
+    }
+
+    .intro-detalhes p::before {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .emp-intro {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 10rem;
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .intro-nome {
+        font-size: 2rem;
+    }
+
+    .intro-nome::before {
+        width: 20.7rem;
+        height: 0.875rem;
+        top: 1.5rem;
+    }
+
+    .intro-texto {
+        max-width: 35ch;
+    }
+
+    .intro-detalhes div {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .emp-intro {
+        grid-template-columns: 1fr;
+        position: relative;
+        margin-bottom: 3rem;
+    }
+
+    .emp-intro picture {
+        position: absolute;
+        top: -156px;
+        z-index: -1;
+    }
+
+    .intro-conteudo {
+        background: var(--c10);
+        margin-top: 26rem;
+        padding: 2.5rem 1.5rem;
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+
+    .intro-tipo {
+        margin-left: 1rem;
+    }
+
+    .intro-nome {
+        z-index: 0;
+        margin-left: 1rem;
+    }
+
+    .intro-nome::before {
+        width: 20.7rem;
+        height: 0.875rem;
+        top: 1.5rem;
+        z-index: -1;
+    }
+
+    .intro-local {
+        margin-left: 1rem;
+    }
+
+    .intro-texto {
+        margin-left: 1rem;
+        max-width: 40ch;
+        position: relative;
+    }
+
+    .intro-texto::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 80px;
+        background-color: var(--c30);
+        position: absolute;
+        left: -12px;
+    }
+
+    .intro-detalhes {
+        margin-bottom: 3rem;
+    }
+
+    .intro-detalhes summary {
+        margin-left: 1rem;
+    }
+}
+
 /* DESTAQUES */
 
 .emp-destaques {
@@ -143,6 +281,38 @@
     font-weight: 600;
 }
 
+/* RESPONSIVO DESTAQUES */
+
+@media (max-width: 1440px) {
+    .emp-destaques {
+        gap: 3.5rem;
+    }
+
+    .emp-destaques img {
+        width: 40px;
+        height: auto;
+    }
+
+    .emp-destaques p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .emp-destaques {
+        padding: 2rem 2rem;
+        gap: 1.5rem;
+    }
+
+    .emp-destaques p {
+        font-size: 1rem;
+    }
+
+    .emp-destaques img {
+        width: 32px;
+    }
+}
+
 /* FOTOS */
 
 .emp-fotos {
@@ -152,6 +322,22 @@
 .logo-emp {
     margin: 0 auto;
     margin-bottom: 6rem;
+}
+
+/* RESPONSIVO FOTOS */
+
+@media (max-width: 1440px) {
+    .logo-emp {
+        margin-bottom: 4rem;
+        width: 224px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1080px) {
+    .logo-emp {
+        width: 192px;
+    }
 }
 
 /* INFORMAÇÕES */
@@ -197,6 +383,46 @@
     color: var(--c70);
 }
 
+/* RESPONSIVO INFORMAÇÕES */
+
+@media (max-width: 1440px) {
+    .emp-informacoes {
+        padding: 0 1rem;
+    }
+
+    .emp-informacoes h2 {
+        margin-bottom: 2.5rem;
+    }
+
+    .emp-informacoes ul {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .emp-informacoes {
+        padding: 0;
+    }
+
+    .emp-informacoes h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .info-box {
+        padding: 1.5rem 2rem;
+    }
+
+    .emp-informacoes ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .info-box h3 {
+        font-size: 1rem;
+    }
+}
+
 /* REGIÃO */
 
 .emp-regiao {
@@ -223,6 +449,39 @@
     margin-bottom: 1.25rem;
 }
 
+/* RESPONSIVO REGIÃO */
+
+@media (max-width: 1440px) {
+    .emp-regiao {
+        padding-inline: 1rem;
+    }
+
+    .emp-regiao h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .emp-regiao p {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .emp-regiao {
+        grid-template-columns: 1fr;
+        padding-inline: 0;
+    }
+
+    .emp-regiao h2 {
+        font-size: 1.5rem;
+    }
+
+    .emp-regiao picture {
+        grid-column: 1/-1;
+        margin: 0 auto;
+    }
+}
+
 /* BANNER */
 
 .emp-banner {
@@ -244,30 +503,46 @@
     color: var(--p1);
 }
 
+/* RESPONSIVO BANNER */
+
+@media (max-width: 1080px) {
+    .emp-banner h2 {
+        font-size: 1.5rem;
+        padding: 2rem 0;
+    }
+}
+
 /* MAPA */
 
 .emp-mapa {
     display: grid;
     grid-template-columns: 8fr 4fr;
     position: relative;
+    margin-inline: 5rem;
+}
+
+.emp-mapa map {
+    width: 95%;
 }
 
 .mapa-header {
-    width: 80rem;
+    width: 90rem;
     height: 20rem;
-    background: url(/css/img/site/empreendimentos/cabecalho.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.5);
     position: absolute;
     top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: -1;
 }
 
 .quadra {
-    background: var(--b3);
     max-width: max-content;
     height: max-content;
-    margin: 9rem auto 0 auto;
+    margin-top: 12rem;
+
+    background: var(--b3);
     padding: 0.25rem;
     border-radius: 10px;
     border: 1px solid var(--c30);
@@ -368,6 +643,37 @@ tbody td + td {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* RESPONSIVO MAPA */
+
+@media (max-width: 1440px) {
+    .mapa-header {
+        width: 63.5rem;
+    }
+
+    .quadra {
+        margin: 7rem auto 0 auto;
+    }
+}
+
+@media (max-width: 1080px) {
+    .emp-mapa {
+        grid-template-columns: 1fr;
+        /* margin-inline: 5rem; */
+    }
+
+    .emp-mapa map {
+        width: 100%;
+    }
+
+    .mapa-header {
+        display: none;
+    }
+
+    .quadra {
+        margin-top: 2rem;
+    }
+}
+
 @media (max-width: 720px) {
     .emp-mapa {
         grid-template-columns: 1fr;
@@ -385,7 +691,6 @@ tbody td + td {
 /* SIMULADOR */
 
 .emp-simulador {
-    margin-top: 2rem;
     margin-bottom: 10rem;
     margin-left: 50%;
 
@@ -483,6 +788,16 @@ tbody td + td {
 .emp-simulador button {
     margin-top: 1.5rem;
     align-self: end;
+}
+
+/* RESPONSIVO SIMULADOR */
+
+@media (max-width: 1080px) {
+    .emp-simulador {
+        margin-bottom: 4rem;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
 }
 
 @media (max-width: 720px) {
