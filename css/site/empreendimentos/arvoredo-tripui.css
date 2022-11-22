@@ -315,7 +315,8 @@
 
 @media (max-width: 720px) {
     .emp-destaques {
-        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        margin-inline: 1.5rem;
     }
 }
 
