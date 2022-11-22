@@ -198,13 +198,14 @@
 
     .emp-intro picture {
         position: absolute;
+        width: 100%;
         top: 0px;
         z-index: -1;
     }
 
     .intro-conteudo {
         background: var(--c10);
-        /* margin-top: 24rem; */
+        margin-top: 22rem;
         padding: 2.5rem 1.5rem;
         border-radius: 1.5rem 1.5rem 0 0;
     }
