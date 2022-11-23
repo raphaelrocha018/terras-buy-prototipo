@@ -196,43 +196,62 @@
         gap: 0;
     }
 
-    .emp-intro picture {
+    .emp-intro img {
         position: absolute;
-        width: 100%;
+        width: 100vw;
         top: 0px;
         z-index: -1;
     }
 
     .intro-conteudo {
+        display: flex;
+        flex-direction: column;
         background: var(--c10);
-        margin-top: 22rem;
+        margin-top: 85vw;
         padding: 2.5rem 1.5rem;
         border-radius: 1.5rem 1.5rem 0 0;
+        position: relative;
+    }
+
+    .intro-conteudo::before {
+        content: "";
+        display: inline-block;
+        width: 2.5rem;
+        height: 0.25rem;
+        border-radius: 0.5rem;
+        background: var(--c40);
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .intro-tipo {
+        font-size: 0.75rem;
         margin-left: 1rem;
     }
 
     .intro-nome {
+        font-size: 1.5rem;
         z-index: 0;
         margin-left: 1rem;
     }
 
     .intro-nome::before {
-        width: 20.7rem;
-        height: 0.875rem;
-        top: 1.5rem;
+        width: 15.5rem;
+        height: 0.75rem;
+        top: 1rem;
         z-index: -1;
     }
 
     .intro-local {
+        font-size: 1rem;
         margin-left: 1rem;
     }
 
     .intro-texto {
         margin-left: 1rem;
-        max-width: 40ch;
+        max-width: 72vw;
         position: relative;
     }
 
@@ -240,8 +259,9 @@
         content: "";
         display: inline-block;
         width: 4px;
-        height: 80px;
+        height: 100%;
         background-color: var(--c30);
+        border-radius: 8px;
         position: absolute;
         left: -12px;
     }
@@ -252,6 +272,11 @@
 
     .intro-detalhes summary {
         margin-left: 1rem;
+    }
+
+    .intro-conteudo button {
+        justify-content: center;
+        font-size: 1rem;
     }
 }
 
@@ -348,6 +373,16 @@
     }
 }
 
+@media (max-width: 720px) {
+    .emp-fotos {
+        margin-inline: 0.75rem;
+    }
+
+    .emp-fotos img {
+        border-radius: 1rem;
+    }
+}
+
 /* INFORMAÇÕES */
 
 .emp-informacoes {
@@ -364,17 +399,17 @@
     margin-bottom: 3rem;
 }
 
+.emp-informacoes ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 .info-box {
     background: var(--c00);
     border-radius: 0.75rem;
     padding: 1.5rem 2rem;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.emp-informacoes ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
 }
 
 .info-box h3 {
@@ -428,6 +463,30 @@
 
     .info-box h3 {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .emp-informacoes {
+        padding-left: 1rem;
+    }
+
+    .emp-informacoes ul {
+        display: flex;
+        gap: 1rem;
+        overflow-x: scroll;
+    }
+
+    .info-box {
+        height: 16rem;
+    }
+
+    .info-box:last-child {
+        margin-right: 1rem;
+    }
+
+    .info-box p {
+        width: 13rem;
     }
 }
 
@@ -490,6 +549,12 @@
     }
 }
 
+@media (max-width: 720px) {
+    .emp-regiao {
+        padding-inline: 1rem;
+    }
+}
+
 /* BANNER */
 
 .emp-banner {
@@ -517,6 +582,18 @@
     .emp-banner h2 {
         font-size: 1.5rem;
         padding: 2rem 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .emp-banner {
+        border-radius: 0.75rem;
+        margin: 4rem 1rem;
+    }
+
+    .emp-banner h2 {
+        font-size: 1rem;
+        padding: 1.5rem 0;
     }
 }
 
@@ -666,7 +743,6 @@ tbody td + td {
 @media (max-width: 1080px) {
     .emp-mapa {
         grid-template-columns: 1fr;
-        /* margin-inline: 5rem; */
     }
 
     .emp-mapa map {
@@ -685,6 +761,7 @@ tbody td + td {
 @media (max-width: 720px) {
     .emp-mapa {
         grid-template-columns: 1fr;
+        margin-inline: 1rem;
     }
 
     .mapa-header {
@@ -798,6 +875,18 @@ tbody td + td {
     align-self: end;
 }
 
+.emp-simulador button::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../../img/site/icones/agendar.png);
+}
+
+.emp-simulador button:hover::before {
+    background: url(../../img/site/icones/agendar-hover.png);
+}
+
 /* RESPONSIVO SIMULADOR */
 
 @media (max-width: 1080px) {
@@ -810,11 +899,23 @@ tbody td + td {
 
 @media (max-width: 720px) {
     .emp-simulador {
-        margin-left: 0;
+        margin-inline: 0.5rem;
+    }
+
+    .simulador-container {
+        padding: 1.5rem 0.5rem 0.5rem 0.5rem;
     }
 
     .emp-simulador button {
         margin-top: 1.5rem;
         align-self: initial;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .simulador-escolha,
+    .simulador-entrada,
+    .simulador-financiamento {
+        padding-inline: 0.5rem;
     }
 }

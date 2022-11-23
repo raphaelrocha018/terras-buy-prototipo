@@ -52,7 +52,8 @@
         padding: 3rem 0;
         display: grid;
         grid-template-columns: auto auto;
-        gap: 3rem 2rem;
+        gap: 3rem 0.75rem;
+        justify-content: space-around;
     }
 
     .logo {
@@ -83,6 +84,7 @@
         grid-template-columns: auto auto;
         gap: 0;
         background: var(--c00);
+        justify-content: space-between;
     }
 
     .header-navbar img {

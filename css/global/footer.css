@@ -126,6 +126,10 @@
 }
 
 @media (max-width: 720px) {
+    .rodape {
+        background-size: 300vw;
+    }
+
     .rodape img {
         width: 8rem;
     }
