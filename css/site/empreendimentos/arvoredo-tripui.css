@@ -604,6 +604,18 @@
 
 /* MAPA */
 
+.mapa-header {
+    width: 90rem;
+    height: 20rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
 .emp-mapa {
     display: grid;
     grid-template-columns: 8fr 4fr;
@@ -615,16 +627,22 @@
     width: 95%;
 }
 
-.mapa-header {
-    width: 90rem;
-    height: 20rem;
-    border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    top: 4rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
+/* QUADRA INDISPONÍVEL */
+.emp-mapa map a > path {
+    fill: rgba(0, 65, 40, 0.5);
+}
+
+/* QUADRA DISPONÍVEL */
+.emp-mapa map a > path {
+    fill: rgba(0, 255, 137, 0.2);
+}
+
+/* QUADRA HOVER */
+.emp-mapa map a > path:hover {
+    fill: rgba(0, 255, 137, 0.4);
+    stroke: rgb(0, 255, 137);
+    stroke-width: 3px;
+    transition: 0.3s;
 }
 
 .quadra {
@@ -669,6 +687,7 @@
 
 .quadras-disponiveis {
     display: none;
+
     margin-top: 0.5rem;
     border-radius: 0.5rem;
 }
@@ -692,6 +711,8 @@
 }
 
 .quadra-tabela {
+    display: none;
+
     margin-top: 0.5rem;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
@@ -700,7 +721,7 @@
     text-align: center;
 }
 
-thead th {
+.quadra-tabela thead th {
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--c50);
@@ -710,26 +731,26 @@ thead th {
     width: 5rem;
 }
 
-thead .th-1 {
+.quadra-tabela thead .th-1 {
     border-radius: 0.5rem 0 0 0.5rem;
 }
 
-thead .th-4 {
+.quadra-tabela thead .th-4 {
     border-radius: 0 0.5rem 0.5rem 0;
 }
 
-tbody tr:nth-child(even) {
+.quadra-tabela tbody tr:nth-child(even) {
     background: rgba(255, 255, 255, 0.5);
 }
 
-tbody td {
+.quadra-tabela tbody td {
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--c70);
     padding: 0.5rem 1rem;
 }
 
-tbody td + td {
+.quadra-tabela tbody td + td {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
