@@ -197,7 +197,7 @@
     }
 
     .emp-intro img {
-        position: absolute;
+        position: fixed;
         width: 100vw;
         top: 0px;
         z-index: -1;
