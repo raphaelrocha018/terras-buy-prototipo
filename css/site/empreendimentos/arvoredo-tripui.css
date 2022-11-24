@@ -192,7 +192,7 @@
 @media (max-width: 720px) {
     .emp-intro {
         grid-template-columns: 1fr;
-        margin-bottom: 3rem;
+        margin-bottom: 0rem;
         gap: 0;
     }
 
@@ -613,7 +613,7 @@
     top: 4rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: 0;
 }
 
 .emp-mapa {
@@ -625,6 +625,7 @@
 
 .emp-mapa map {
     width: 95%;
+    z-index: 1;
 }
 
 /* QUADRA INDISPONÍVEL */
@@ -655,6 +656,7 @@
     border-radius: 10px;
     border: 1px solid var(--c30);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .quadra-escolha {
@@ -670,6 +672,7 @@
 
     font-size: 0.875rem;
     color: var(--c40);
+    z-index: 1;
 }
 
 .quadra-escolha::after {
@@ -719,6 +722,7 @@
     border-radius: 0.5rem;
     border-collapse: collapse;
     text-align: center;
+    z-index: 1;
 }
 
 .quadra-tabela thead th {
@@ -926,6 +930,8 @@
 @media (max-width: 720px) {
     .emp-simulador {
         margin-inline: 0.5rem;
+        margin-bottom: 0;
+        padding-bottom: 4rem;
     }
 
     .simulador-container {
@@ -944,4 +950,10 @@
     .simulador-financiamento {
         padding-inline: 0.5rem;
     }
+}
+
+/* FUNDO */
+
+.fundo {
+    background-color: var(--c10);
 }
