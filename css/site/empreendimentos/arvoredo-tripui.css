@@ -628,17 +628,17 @@
 }
 
 /* QUADRA INDISPONÍVEL */
-.emp-mapa map a > path {
+.indisponivel > path {
     fill: rgba(0, 65, 40, 0.5);
 }
 
 /* QUADRA DISPONÍVEL */
-.emp-mapa map a > path {
+.disponivel > path {
     fill: rgba(0, 255, 137, 0.2);
 }
 
 /* QUADRA HOVER */
-.emp-mapa map a > path:hover {
+.disponivel > path:hover {
     fill: rgba(0, 255, 137, 0.4);
     stroke: rgb(0, 255, 137);
     stroke-width: 3px;
