@@ -4,9 +4,9 @@
     gap: 32px;
 
     margin: 0 auto;
-    padding: 32px 64px;
+    padding: 64px 64px;
     max-width: 1440px;
-    height: 92vh;
+    height: 100vh;
 }
 
 .dash-conteudo {

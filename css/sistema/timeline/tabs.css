@@ -131,7 +131,6 @@
 }
 
 .fb-conteudo {
-    min-height: 330px;
     display: flex;
     flex-direction: column;
     place-content: space-between;

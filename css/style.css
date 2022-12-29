@@ -13,6 +13,11 @@
 
 /* EMPREENDIMENTOS */
 @import url("site/empreendimentos/arvoredo-tripui.css");
+@import url("site/empreendimentos/quadra-arvoredo-tripui.css");
+
+/* LOGIN */
+@import url("sistema/login/login.css");
+@import url("sistema/login/register.css");
 
 /* SISTEMA */
 @import url("sistema/dashboard.css");
