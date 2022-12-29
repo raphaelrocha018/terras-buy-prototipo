@@ -1,0 +1,215 @@
+.dash-sidebar {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: start;
+
+    padding: 2rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+
+    height: calc(100vh - 8rem);
+    max-height: calc(100vh - 8rem);
+    min-width: max-content;
+}
+
+.perfil {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.perfil > img {
+    width: 2.5rem;
+    height: 2.5rem;
+    max-width: max-content;
+}
+
+.cliente {
+    display: flex;
+    flex-direction: column;
+}
+
+.cliente > h1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cliente > span {
+    font-size: 0.75rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.area1,
+.area2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.area1 li,
+.area2 li {
+    margin-bottom: 0.75rem;
+}
+
+.area2 li:last-child {
+    margin-bottom: 0;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1440px) {
+    .dash-sidebar {
+        height: calc(100vh - 6rem);
+        max-height: calc(100vh - 6rem);
+    }
+}
+
+@media (max-width: 1280px) {
+    .dash-sidebar {
+        height: calc(100vh - 4rem);
+        max-height: calc(100vh - 4rem);
+    }
+}
+
+/* BOTÃO PADRÃO */
+.btn {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    color: var(--p3);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease;
+}
+
+/* BOTÃO PAINEL */
+
+.btn-painel {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-painel::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/sistema/sidebar/painel-off.png);
+}
+
+.btn-painel:hover::before {
+    background: url(../img/sistema/sidebar/painel-hover.png);
+    transition: 0.4s ease;
+}
+
+/* BOTÃO LOTES */
+
+.btn-lotes {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-lotes::before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    background: url(../img/sistema/sidebar/lotes-off.png);
+}
+
+.btn-lotes:hover::before {
+    background: url(../img/sistema/sidebar/lotes-hover.png);
+    transition: 0.4s ease;
+}
+
+/* BOTÃO DADOS */
+
+.btn-perfil {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-perfil::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    background: url(../img/sistema/sidebar/perfil-off.png);
+}
+
+.btn-perfil:hover::before {
+    background: url(../img/sistema/sidebar/perfil-hover.png);
+    transition: 0.4s ease;
+}
+
+/* BOTÃO FINANCEIRO */
+
+.btn-financeiro {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-financeiro::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/sistema/sidebar/financeiro-off.png);
+}
+
+.btn-financeiro:hover::before {
+    background: url(../img/sistema/sidebar/financeiro-hover.png);
+    transition: 0.4s ease;
+}
+
+/* BOTÃO SUPORTE */
+
+.btn-suporte {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-suporte::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/sistema/sidebar/suporte-off.png);
+}
+
+.btn-suporte:hover::before {
+    background: url(../img/sistema/sidebar/suporte-hover.png);
+    transition: 0.4s ease;
+}
+
+/* BOTÃO SAIR */
+
+.btn-sair {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.btn-sair::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/sistema/sidebar/sair-off.png);
+}
+
+.btn-sair:hover::before {
+    background: url(../img/sistema/sidebar/sair-hover.png);
+    transition: 0.4s ease;
+}

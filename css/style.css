@@ -20,7 +20,11 @@
 @import url("sistema/login/register.css");
 
 /* SISTEMA */
+@import url("sistema/sidebar.css");
 @import url("sistema/dashboard.css");
+@import url("sistema/compras.css");
+@import url("sistema/perfil.css");
+@import url("sistema/financeiro.css");
 
 /* TIMELINE */
 @import url("sistema/timeline/timeline.css");

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Dados Pessoais - TerrasBuy</title>
+</head>
+
+<body class="sistema">
+    <div class="dash-container">
+        <!-- BARRA LATERAL -->
+        <nav class="dash-sidebar">
+            <div class="perfil">
+                <img src="../css/img/sistema/foto-perfil.png" alt="">
+                <div class="cliente">
+                    <h1>Raphael</h1>
+                    <span>Cliente</span>
+                </div>
+            </div>
+            <ul class="area1">
+                <li class="btn"><a class="btn-painel" href="/sistema/dashboard.html">Meu Painel</a></li>
+                <li class="btn"><a class="btn-lotes" href="/sistema/meus-lotes.html">Meus Lotes</a></li>
+                <li class="btn"><a class="btn-perfil" href="/sistema/perfil.html">Dados Pessoais</a></li>
+                <li class="btn"><a class="btn-financeiro" href="/sistema/financeiro.html">Dados Financeiros</a></li>
+            </ul>
+            <ul class="area2">
+                <li class="btn"><a class="btn-suporte" href="./">Suporte</a></li>
+                <li class="btn"><a class="btn-sair" href="../index.html">Sair</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTEÚDO -->
+        <main class="dash-conteudo">
+            <h1>Dados Pessoais</h1>
+
+            <!-- DADOS PESSOAIS -->
+            <form role="form" method="post" enctype="multipart/form-data" asp-controller="User" asp-action="EditUser" class="side-perfil">
+                <section class="perfil-sobre">
+                    <h2>Sobre você</h2>
+                    <div>
+                        <label for="nome">Nome</label>
+                        <input asp-for="user.Name" type="text" required />
+                    </div>
+                    <div>
+                        <label for="cpf">CPF</label>
+                        <input asp-for="user.CPF_CNPJ" data-mask="000.000.000-00" type="text" required />
+                    </div>
+                    <div>
+                        <label for="tel">Telefone</label>
+                        <input asp-for="user.PhoneNumber" type="text" data-mask="(00) 00000-0000" required />
+                    </div>
+                    <div>
+                        <label for="">Estado Civil</label>
+                        <select required asp-for="user.IdCivilStatus" asp-items="Model.ListCivilStatus" id="IdOcuppation">
+                            <option value="" selected></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Profissão</label>
+                        <select required asp-for="user.IdOcuppation" asp-items="Model.ListOcuppation" id="IdOcuppation">
+                            <option value="" selected></option>
+                        </select>
+                    </div>
+                </section>
+                <section class="perfil-endereco">
+                    <h2>Seu endereço</h2>
+                    <div>
+                        <label for="cep">CEP</label>
+                        <input asp-for="user.PostalCode" onblur="pesquisacep(this.value);" type="text" id="cep" required />
+                    </div>
+                    <div>
+                        <label for="logradouro">Logradouro</label>
+                        <input asp-for="user.Address" type="text" id="rua" required />
+                    </div>
+                    <div>
+                        <label for="numero">Número</label>
+                        <input asp-for="user.AddressNumber" type="text" required />
+                    </div>
+                    <div>
+                        <label for="complemento">Complemento</label>
+                        <input asp-for="user.AddressComplement" type="text" />
+                    </div>
+                    <div>
+                        <label for="bairro">Bairro</label>
+                        <input asp-for="user.District" type="text" id="bairro" required />
+                    </div>
+                    <div>
+                        <label for="cidade">Cidade</label>
+                        <input asp-for="user.City" type="text" id="cidade" required />
+                    </div>
+                    <div>
+                        <label for="estado">Estado</label>
+                        <input asp-for="user.State" type="text" id="uf" required />
+                    </div>
+                </section>
+                <section class="perfil-conta">
+                    <h2>Sua conta</h2>
+                    <div>
+                        <img src="/css/img/sistema/foto-perfil.png" alt="">
+                        <button class="edit"></button>
+                        <button class="remove"></button>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input asp-for="user.Email" type="email" required />
+                    </div>
+                    <div>
+                        <label for="senha">Senha</label>
+                        <input asp-for="user.PasswordHash" type="password" required />
+                    </div>
+                </section>
+                <section class="perfil-acoes">
+                    <button type="button" class="btn-cancelar">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn-salvar">
+                        Atualizar Dados
+                    </button>
+                </section>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
