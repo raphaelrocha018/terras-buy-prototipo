@@ -37,15 +37,146 @@
     }
 }
 
-
 /* COMPRA RECENTE */
 
-.compra-recente {
-    background-color: var(--c00);
+.compras-recente {
+    background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     padding: 2rem 2rem 2rem 3rem;
 
     position: relative;
     height: max-content;
+}
+
+.compras-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.compras-info li {
+    background-color: var(--c00);
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.5rem;
+}
+
+.compras-info li h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--c60);
+    margin-bottom: 1rem;
+}
+
+.compras-info li p {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--c50);
+}
+
+.compras-info li p:last-child {
+    margin-top: 0.75rem;
+}
+
+.info-valor {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--p3);
+}
+
+.info-porcento {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--c00);
+    background-color: var(--p2);
+    border-radius: 0.25rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.info-fatura p:nth-child(4) {
+    padding-bottom: 0.5rem;
+}
+
+.compras-info li div:has(.info-porcento) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.barra-progresso {
+    display: flex;
+    height: 10px;
+    width: 100%;
+    background-color: var(--c10);
+    border-radius: 10px;
+}
+
+.barra-progresso div {
+    align-self: center;
+    height: 8px;
+    width: 100%;
+    min-width: 8px;
+    background-color: var(--p2);
+    border-radius: 8px;
+    margin-inline: 1px;
+}
+
+/* DESCUBRA NOVOS LOTES */
+
+.explorar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+
+    height: 20rem;
+    width: 100%;
+    border-radius: 1rem;
+    background: url(/css/img/sistema/dashboard/explore.png) no-repeat;
+
+    padding: 4rem;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.explorar h2 {
+    font-size: 2rem;
+    color: var(--c05);
+    margin-bottom: 0.5rem;
+}
+
+.explorar p {
+    font-size: 1rem;
+    color: var(--c10);
+    max-width: 32ch;
+    margin-bottom: 0.5rem;
+}
+
+.explorar button {
+    max-width: max-content;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--c00);
+    background-color: var(--p3);
+}
+
+.explorar button:hover {
+    color: var(--p1);
+    background-color: var(--p5);
+}
+
+.explorar button::before {
+    content: "";
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url(../img/site/home/icones/terras-hover.svg);
+    background-size: contain;
+}
+
+.explorar button:hover::before {
+    background: url(../img/site/home/icones/terras.svg);
+    background-size: contain;
 }
