@@ -34,13 +34,66 @@
         </nav>
 
         <!-- CONTEÚDO -->
-        <div class="dash-conteudo">
-            <h1>Meu Painel</h1>
+        <main class="dash-conteudo">
 
-            <!-- DASHBOARD -->
-            <section class="side-painel">
+            <!-- COMPRAS RECENTES -->
+            <h1>Compras Recentes</h1>
+            <section class="compra-recente">
+                <div class="tl-info">
+                    <div class="tl-empreendimento">
+                        <span>Condomínio Fechado</span>
+                        <h2>@Model.allotment.Name</h2>
+                        <h3>@Model.allotment.City</h3>
+                    </div>
+                    <div class="tl-quadra">
+                        <h2>Quadra @Model.checkout.lot.Block</h2>
+                        <h3>Lote @Model.checkout.lot.NumberLot</h3>
+                    </div>
+                    <div class="tl-corretor">
+                        <h2>Corretor</h2>
+                        <h3>Gustavo Kelvin</h3>
+                    </div>
+                    <div class="tl-status">
+                        <h2>Status da compra</h2>
+                        <h3>Concluída</h3>
+                    </div>
+                </div>
+                <ul class="container">
+                    <li>
+                        <span>Entrada</span>
+                        <span>Pago até agora</span>
+                            <div>
+                                <span>@Model.checkout.ValueEntryInstallments</span>
+                            </div>
+                            <div>
+                                <span class="percent">40%</span>
+                            </div>
+                            <div class="percent-line">
+                                <div class="progress-bar"></div>
+                            </div>
+                    </li>
+                    <li>
+                        <span>Financiamento</span>
+                        <span>Pago até agora</span>
+                        <span>@Model.checkout.ValueInstallments</span>
+                    </li>
+                    <li>
+                        <span>Próxima Fatura</span>
+                        <span>Data mais atual</span>
+                        <span>@Model.checkout.ValueInstallments</span>
+                    </li>
+                </ul>
             </section>
-        </div>
+
+        <!-- DESCUBRA NOVOS LOTES -->
+            <h1>Explore novas oportunidades</h1>
+            <section class="explorar">
+                <h2>Descubra os melhores condomínios para investir.</h2>
+                <p>Lorem ipsum</p>
+                <button class="btn1">Conheça nossas terras</button>
+            </section>
+
+        </main>
     </div>
 </body>
 

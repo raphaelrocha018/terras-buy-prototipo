@@ -1,3 +1,5 @@
+/* DASHBOARD GERAL */
+
 .dash-container {
     display: grid;
     grid-template-columns: 2.5fr 9.5fr;
@@ -21,7 +23,7 @@
     margin-left: 3rem;
 }
 
-/* RESPONSIVO */
+/* RESPONSIVO GERAL */
 
 @media (max-width: 1440px) {
     .dash-container {
@@ -33,4 +35,17 @@
     .dash-container {
         padding: 2rem;
     }
+}
+
+
+/* COMPRA RECENTE */
+
+.compra-recente {
+    background-color: var(--c00);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 2rem 2rem 2rem 3rem;
+
+    position: relative;
+    height: max-content;
 }
