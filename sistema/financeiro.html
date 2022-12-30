@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/style.css">
-    <title>Dados Financeiros - TerrasBuy</title>
+    <title>Dados Financeiros - Vierte</title>
 </head>
 
 <body class="sistema">
@@ -34,13 +34,78 @@
         </nav>
 
         <!-- CONTEÚDO -->
-        <div class="dash-conteudo">
+        <main class="dash-conteudo">
             <h1>Dados Financeiros</h1>
 
             <!-- DADOS FINANCEIROS -->
-            <section class="side-financeiro">
-            </section>
-        </div>
+            <form role="form" method="post" enctype="multipart/form-data" asp-controller="Financial" asp-action="EditFinancial" class="side-financeiro">
+                <div class="financeiro-cartao">
+                    <h2>Cartões de Crédito</h2>
+                    <div>
+                        <div>
+                            <label for="num-cartao">Número do cartão</label>
+                            <input asp-for="userCards[0].CardNumber" data-mask="0000 0000 0000 0000" type="text" />
+                        </div>
+                        <div>
+                            <label for="validade">Validade</label>
+                            <input asp-for="userCards[0].ExpirationDate" data-mask="00/00" type="text" />
+                        </div>
+                        <div>
+                            <label for="nome-cartao">Nome impresso no cartão</label>
+                            <input asp-for="userCards[0].HolderName" type="text" />
+                        </div>
+                        <div>
+                            <label for="cvv">CVV</label>
+                            <input asp-for="userCards[0].CVV" data-mask="000" type="text" />
+                        </div>
+                        <div class="cartao-principal">
+                            <input type="checkbox" name="CartaoPrincipal">
+                            <label for="CartaoPrincipal">Cartão principal</label>
+                        </div>
+                    </div>
+                </div>
+                <section class="financeiro-endereco">
+                    <h2>Endereço de Cobrança</h2>
+                    <div>
+                        <label for="cep">CEP</label>
+                        <input asp-for="user.PostalCode" onblur="pesquisacep(this.value);" type="text" id="cep" required />
+                    </div>
+                    <div>
+                        <label for="logradouro">Logradouro</label>
+                        <input asp-for="user.Address" type="text" id="rua" required />
+                    </div>
+                    <div>
+                        <label for="numero">Número</label>
+                        <input asp-for="user.AddressNumber" type="text" required />
+                    </div>
+                    <div>
+                        <label for="complemento">Complemento</label>
+                        <input asp-for="user.AddressComplement" type="text" />
+                    </div>
+                    <div>
+                        <label for="bairro">Bairro</label>
+                        <input asp-for="user.District" type="text" id="bairro" required />
+                    </div>
+                    <div>
+                        <label for="cidade">Cidade</label>
+                        <input asp-for="user.City" type="text" id="cidade" required />
+                    </div>
+                    <div>
+                        <label for="estado">Estado</label>
+                        <input asp-for="user.State" type="text" id="uf" required />
+                    </div>
+                </section>
+
+                <section class="financeiro-acoes">
+                    <button type="button" class="btn-cancelar">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn-salvar">
+                        Atualizar Dados
+                    </button>
+                </section>
+            </form>
+        </main>
     </div>
 </body>
 

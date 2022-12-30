@@ -1,0 +1,151 @@
+.side-financeiro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem 6rem;
+
+    background-color: var(--c00);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 2rem 2rem 2rem 3rem;
+
+    position: relative;
+    min-height: 76vh;
+}
+
+.side-financeiro h2 {
+    font-size: 1.125rem;
+    color: var(--p3);
+    margin-bottom: 0.5rem;
+}
+
+.side-financeiro label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--c60);
+    margin-bottom: 0.25rem;
+}
+
+.side-financeiro input,
+.side-financeiro select {
+    background: var(--c05);
+    border: solid 1px var(--c20);
+    border-radius: 0.25rem;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--c70);
+
+    padding: 0.375rem 0.75rem;
+    width: 100%;
+}
+
+.side-financeiro input:focus,
+.side-financeiro select:focus {
+    outline: none;
+    background: var(--c00);
+    border: solid 1px var(--p2);
+}
+
+.financeiro-cartao {
+    grid-column: 1;
+}
+
+.financeiro-cartao h2 {
+    margin-bottom: 1.5rem;
+}
+
+.financeiro-cartao > div {
+    background-color: var(--c05);
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 0.75rem;
+    height: max-content;
+}
+
+.financeiro-cartao div div:nth-child(2, 4) {
+    grid-column: 2;
+}
+
+.financeiro-cartao input {
+    background: var(--c00);
+}
+
+.cartao-principal {
+    display: flex;
+    flex-direction: row;
+    max-width: max-content;
+}
+
+.cartao-principal label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--c50);
+}
+
+.cartao-principal input {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--c30);
+    background-color: var(--c00);
+    padding: 0;
+    margin-right: 0.5rem;
+}
+
+.cartao-principal input:checked {
+    border-color: var(--c40);
+    border-radius: 0.3rem;
+    box-shadow: inset 0 0 0 2px var(--c00), inset 0 0 0 10px var(--p2);
+}
+
+.financeiro-endereco {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.75rem 1rem;
+    height: max-content;
+}
+
+.financeiro-endereco h2 {
+    grid-column: 1/8;
+}
+
+.financeiro-endereco div:nth-child(2) {
+    grid-column: 1/3;
+}
+
+.financeiro-endereco div:nth-child(3) {
+    grid-column: 3/8;
+}
+
+.financeiro-endereco div:nth-child(4) {
+    grid-column: 1/3;
+}
+
+.financeiro-endereco div:nth-child(5) {
+    grid-column: 3/5;
+}
+
+.financeiro-endereco div:nth-child(6) {
+    grid-column: 5/8;
+}
+
+.financeiro-endereco div:nth-child(7) {
+    grid-column: 1/6;
+}
+
+.financeiro-endereco div:nth-child(8) {
+    grid-column: 6/8;
+}
+
+.financeiro-acoes {
+    grid-column: 2;
+    display: flex;
+    gap: 1.25rem;
+    place-self: end;
+}
