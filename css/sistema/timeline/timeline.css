@@ -47,6 +47,21 @@
     color: #646464;
 }
 
+.tl-quadra {
+    position: relative;
+}
+
+.tl-quadra::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--p2);
+    position: absolute;
+    left: -10px;
+}
+
 .tl-quadra > h2 {
     font-size: 12px;
     font-style: italic;
