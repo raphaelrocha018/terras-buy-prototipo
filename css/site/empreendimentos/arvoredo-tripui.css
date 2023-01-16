@@ -22,19 +22,20 @@
     font-size: 3rem;
     font-weight: 800;
     color: var(--p5);
+    max-width: max-content;
     position: relative;
 }
 
 .intro-nome::before {
     content: "";
     display: inline-block;
-    width: 488px;
+    width: 101%;
     height: 1.5rem;
     border-radius: 4px;
     background: var(--p1);
     position: absolute;
     top: 2rem;
-    left: -4px;
+    left: -2px;
     z-index: -1;
 }
 
@@ -565,7 +566,7 @@
 .emp-banner {
     border-radius: 1rem;
     background-color: var(--p5);
-    margin: 8rem 0;
+    margin: 8rem 0 4rem 0;
 }
 
 .emp-banner h2 {
@@ -621,10 +622,17 @@
     grid-template-columns: 8fr 4fr;
     position: relative;
     margin-inline: 5rem;
+    margin-bottom: 6rem;
+    padding-top: 4rem;
 }
 
-.emp-mapa map {
+.mapa-arvoredo-tripui {
     width: 95%;
+    z-index: 1;
+}
+
+.mapa-quintas-do-pontal {
+    width: 100%;
     z-index: 1;
 }
 
